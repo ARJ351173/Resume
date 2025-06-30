@@ -1,22 +1,107 @@
 import React from "react";
 
+// Add print-specific styles
+const printStyles = `
+  @media print {
+    @page {
+      size: A4 portrait;
+      margin: 0.4in;
+    }
+    
+    * {
+      -webkit-print-color-adjust: exact !important;
+      color-adjust: exact !important;
+    }
+    
+    body {
+      font-size: 11px !important;
+      line-height: 1.3 !important;
+      color: black !important;
+      background: white !important;
+    }
+    
+    .print\\:hidden {
+      display: none !important;
+    }
+    
+    .print\\:bg-white {
+      background: white !important;
+    }
+    
+    .print\\:py-0 {
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+    }
+    
+    .print\\:px-4 {
+      padding-left: 1rem !important;
+      padding-right: 1rem !important;
+    }
+    
+    .print\\:py-4 {
+      padding-top: 1rem !important;
+      padding-bottom: 1rem !important;
+    }
+    
+    .print\\:space-y-4 > * + * {
+      margin-top: 1rem !important;
+    }
+    
+    .print\\:space-y-2 > * + * {
+      margin-top: 0.5rem !important;
+    }
+    
+    .print\\:mb-1 {
+      margin-bottom: 0.25rem !important;
+    }
+    
+    .print\\:mb-2 {
+      margin-bottom: 0.5rem !important;
+    }
+    
+    .print\\:text-sm {
+      font-size: 0.875rem !important;
+    }
+    
+    .print\\:text-xs {
+      font-size: 0.75rem !important;
+    }
+    
+    .print\\:shadow-none {
+      box-shadow: none !important;
+    }
+    
+    .print\\:rounded-none {
+      border-radius: 0 !important;
+    }
+  }
+`;
+
+// Inject styles
+if (typeof document !== 'undefined') {
+  const styleElement = document.createElement('style');
+  styleElement.textContent = printStyles;
+  document.head.appendChild(styleElement);
+}
+
 const skills = [
-  { name: "HTML", level: 85 },
-  { name: "Tailwind CSS", level: 80 },
-  { name: "Java", level: 70 },
-  { name: "Git", level: 65 },
-  { name: "MySQL", level: 55 },
-  { name: "Javascript", level: 62 },
-  { name: "Swing", level: 50 },
-  { name: "Kotlin", level: 40 },
-  { name: "React", level: 45 },
+  { name: "HTML" },
+  { name: "Tailwind CSS" },
+  { name: "Java" },
+  { name: "Git" },
+  { name: "MySQL" },
+  { name: "Javascript" },
+  { name: "Swing" },
+  { name: "Kotlin" },
+  { name: "React" },
+  { name: "Firebase" },
 ];
 
 const languages = [
-  { name: "Hindi", level: 95 },
-  { name: "French", level: 80 },
-  { name: "English", level: 74 },
-  { name: "Japanese", level: 66 },
+  { name: "Hindi" },
+  { name: "French" },
+  { name: "English" },
+  { name: "Japanese" },
 ];
 
 export default function Resume() {
@@ -32,284 +117,157 @@ export default function Resume() {
   };
 
   return (
-    <div className="min-h-screen w-full flex flex-col bg-gradient-to-br from-[#f8fafc] to-[#e3eaf6]">
-      <div className="flex flex-col lg:flex-row font-serif text-[#222]">
-      {/* Sidebar */}
-      <aside className="w-full lg:w-[320px] bg-[#20416a] text-[#f4f7fa] flex flex-col px-5 sm:px-8 lg:px-10 py-8 sm:py-10 lg:py-12 gap-8 sm:gap-10 shadow-2xl z-10 border-b lg:border-b-0 lg:border-r border-accent/20">
-        <div className="flex flex-col items-center gap-2 sm:gap-3">
-          {/* Avatar */}
-          <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-accent flex items-center justify-center text-3xl sm:text-4xl font-bold text-sidebar shadow-lg mb-1 sm:mb-2">
-            AJ
+    <div className="min-h-screen bg-gray-100 py-12 flex justify-center print:bg-white print:py-0">
+      <div className="bg-white shadow-xl rounded-lg w-full max-w-3xl mx-auto print:shadow-none print:rounded-none">
+        {/* Top blue header */}
+        <div className="bg-[#20416a] text-white px-8 py-6 rounded-t-lg print:rounded-none print:px-4 print:py-4">
+          <h1 className="text-3xl font-bold print:text-2xl">Aryan Jain</h1>
+          <div className="mt-2 text-sm font-medium print:text-xs">
+            <a href="tel:8130501945" className="hover:underline">8130501945</a> | 
+            <a href="mailto:AryanJain536@gmail.com" className="underline hover:no-underline">AryanJain536@gmail.com</a> | 
+            <a href="https://www.linkedin.com/in/aryanj351173" target="_blank" rel="noopener noreferrer" className="underline hover:no-underline">LinkedIn</a> | 
+            <a href="https://dosezen-702e6.web.app/" target="_blank" rel="noopener noreferrer" className="underline hover:no-underline">Dosezen</a>
           </div>
-          <h1 className="font-extrabold text-xl sm:text-[2.2rem] leading-6 mt-1 font-serif text-white tracking-tight drop-shadow">
-            Aryan Jain
-          </h1>
-          <div className="text-accent text-xs tracking-widest font-bold mt-1 mb-1">
-            FRONT END DEVELOPER
-          </div>
-        </div>
-        <section>
-          <h2 className="uppercase text-accent text-xs mb-2 font-bold tracking-wide">Details</h2>
-          <div className="text-sm mb-1 font-semibold">8130501945</div>
-          <div className="text-sm mb-1">
-            <a className="underline hover:text-accent font-semibold" href="mailto:AryanJain536@gmail.com">
-              AryanJain536@gmail.com
-            </a>
-          </div>
-        </section>
-        <section>
-          <h2 className="uppercase text-accent text-xs mb-2 font-bold tracking-wide">Links</h2>
-          <div className="flex flex-col gap-2">
-            <div>
-              <span className="text-xs font-semibold">LinkedIn</span>
-              <a
-                className="block underline text-accent text-xs hover:text-white font-semibold break-words"
-                href="https://www.linkedin.com/in/aryanj351173"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                linkedin.com/in/aryanj351173
-              </a>
-            </div>
-            <div>
-              <span className="text-xs font-semibold">Dosezen</span>
-              <a
-                className="block underline text-accent text-xs hover:text-white font-semibold break-words"
-                href="https://dosezen-702e6.web.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                dosezen-702e6.web.app
-              </a>
-            </div>
-          </div>
-        </section>
-        <section>
-          <h2 className="uppercase text-accent text-xs mb-2 font-bold tracking-wide">Skills</h2>
-          <div className="flex flex-col gap-2">
-            {skills.map(({ name }) => (
-              <div key={name}>
-                <label className="text-xs font-semibold">{name}</label>
-              </div>
-            ))}
-          </div>
-        </section>
-        <section>
-          <h2 className="uppercase text-accent text-xs mb-2 font-bold tracking-wide">Languages</h2>
-          <div className="flex flex-col gap-2">
-            {languages.map(({ name }) => (
-              <div key={name}>
-                <label className="text-xs font-semibold">{name}</label>
-              </div>
-            ))}
-          </div>
-        </section>
-        
-        <section>
-          <h2 className="uppercase text-accent text-xs mb-2 font-bold tracking-wide">Certifications</h2>
-          <div className="flex flex-col gap-3">
-            <div>
-              <div className="text-xs font-semibold">DCF and C Programming</div>
-              <div className="text-xs text-accent">Christ University, 2023–2024</div>
-            </div>
-            
-            <div>
-              <div className="text-xs font-semibold">Smart Agriculture using IoT</div>
-              <div className="text-xs text-accent">Christ University, April 2024</div>
-            </div>
-            
-            <div>
-              <div className="text-xs font-semibold">Introduction to Python</div>
-              <div className="text-xs text-accent">Infosys Springboard, Aug 2024</div>
-            </div>
-            
-            <div>
-              <div className="text-xs font-semibold">Web Development Internship</div>
-              <div className="text-xs text-accent">Main Flow Services, May–July 2024</div>
-            </div>
-            
-            <div>
-              <div className="text-xs font-semibold">Artificial Intelligence</div>
-              <div className="text-xs text-accent">Christ University, 2024–2025</div>
-            </div>
-            
-            <div>
-              <div className="text-xs font-semibold">Java Fundamentals</div>
-              <div className="text-xs text-accent">Scaler Academy, April 2025</div>
-            </div>
-            
-            <div>
-              <div className="text-xs font-semibold">Computer Network</div>
-              <div className="text-xs text-accent">Huawei Talent, Jan 2025</div>
-            </div>
-            
-            <div>
-              <div className="text-xs font-semibold">Overview of IoT Technologies</div>
-              <div className="text-xs text-accent">Huawei Talent, Jan 2025</div>
-            </div>
-          </div>
-        </section>
-      </aside>
-      {/* Main Content */}
-      <main className="flex-1 px-4 sm:px-6 lg:px-8 py-6 sm:py-10 lg:py-12 bg-transparent overflow-y-auto flex flex-col gap-6 sm:gap-8">
-        {/* Profile */}
-        <section className="bg-white rounded-xl shadow-md p-4 sm:p-6 lg:p-8 mb-2 border border-accent/30">
-          <h2 className="text-lg sm:text-2xl font-bold font-serif mb-3 text-sidebar tracking-tight">Profile</h2>
-          <p className="text-xs sm:text-sm leading-relaxed">
-            <b>Dynamic Front-End Developer Intern</b> with hands-on experience
-            in web development and foundation in <b>HTML, CSS, JavaScript, and
-            React</b>. Built and deployed a full-stack <b>Medical Reminder</b>{" "}
-            Web App using <b>Firebase Hosting & Cloud Messaging</b>, enabling
-            real-time push notifications to users across mobile and desktop platforms.
-            Proven ability to enhance user experiences through responsive design and
-            effective problem-solving. Adept at working with cross-functional teams to
-            optimize functionality and UI/UX. Quick to learn new technologies,
-            committed to delivering high-quality, innovative digital solutions.
+          <p className="mt-4 text-sm leading-5 font-normal print:text-xs print:mt-2">
+            <b>Dynamic Front-End Developer Intern</b> with hands-on experience in web development and foundation in <b>HTML, CSS, JavaScript, and React</b>. Built and deployed a full-stack <b>Medical Reminder</b> Web App using <b>Firebase Hosting & Cloud Messaging</b>, enabling real-time push notifications to users across mobile and desktop platforms. Proven ability to enhance user experiences through responsive design and effective problem-solving.
           </p>
-        </section>
-        <div className="border-t border-accent/30 my-2" />
-        {/* Education */}
-        <section className="bg-white rounded-xl shadow-md p-4 sm:p-6 lg:p-8 mb-2 border border-accent/30">
-          <h2 className="text-lg sm:text-2xl font-bold mb-3 text-sidebar tracking-tight">Education</h2>
-          <div className="space-y-3">
-            <div>
-              <h3 className="font-bold text-base sm:text-lg">Bachelor of Computer Applications, Christ University</h3>
-              <div className="text-sm text-gray-600 mb-1">GPA: 3.4/4.0</div>
-              <div className="text-xs text-gray-500 mb-1">April 2023</div>
-            </div>
-            <div>
-              <h3 className="font-bold text-base sm:text-lg">Secondary Education, ST MARY'S SCHOOL</h3>
-              <div className="text-xs text-gray-500 mb-1">March 2023</div>
-            </div>
-          </div>
-        </section>
-        <div className="border-t border-accent/30 my-2" />
-        
-        {/* Projects */}
-        <section className="bg-white rounded-xl shadow-md p-4 sm:p-6 lg:p-8 mb-2 border border-accent/30">
-          <h2 className="text-lg sm:text-2xl font-bold mb-4 sm:mb-6 text-sidebar tracking-tight">Projects</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
-            <div className="mb-4">
-              <h3 className="font-bold text-base sm:text-lg mb-2">Dosezen: Medical Reminder App</h3>
-              <ul className="list-disc pl-5 sm:pl-6 text-xs sm:text-sm space-y-1">
-                <li>React-based medical reminder platform</li>
-                <li>Firebase Authentication and Database</li>
-                <li>Cloud Messaging for notifications</li>
-              </ul>
-            </div>
-            
-            <div className="mb-4">
-              <h3 className="font-bold text-base sm:text-lg mb-2">BMI Calculator</h3>
-              <ul className="list-disc pl-5 sm:pl-6 text-xs sm:text-sm space-y-1">
-                <li>Vanilla JavaScript calculator</li>
-                <li>Metric and US units support</li>
-              </ul>
-            </div>
-            
-            <div className="mb-4">
-              <h3 className="font-bold text-base sm:text-lg mb-2">React To-Do List App</h3>
-              <ul className="list-disc pl-5 sm:pl-6 text-xs sm:text-sm space-y-1">
-                <li>Task manager with React</li>
-                <li>State management and CRUD operations</li>
-              </ul>
-            </div>
-            
-            <div className="mb-4">
-              <h3 className="font-bold text-base sm:text-lg mb-2">Image Gallery App</h3>
-              <ul className="list-disc pl-5 sm:pl-6 text-xs sm:text-sm space-y-1">
-                <li>Responsive gallery with lightbox</li>
-                <li>Category filtering and animations</li>
-              </ul>
-            </div>
-            
-            <div className="mb-4">
-              <h3 className="font-bold text-base sm:text-lg mb-2">Banking App (Java Swing)</h3>
-              <ul className="list-disc pl-5 sm:pl-6 text-xs sm:text-sm space-y-1">
-                <li>GUI banking system with MySQL</li>
-                <li>User registration and transactions</li>
-              </ul>
-            </div>
-            
-            <div className="mb-4">
-              <h3 className="font-bold text-base sm:text-lg mb-2">Calculator App (React)</h3>
-              <ul className="list-disc pl-5 sm:pl-6 text-xs sm:text-sm space-y-1">
-                <li>React calculator with mathjs</li>
-                <li>Keyboard support and operations</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-        <div className="border-t border-accent/30 my-2" />
-        
-        {/* Internships */}
-        <section className="bg-white rounded-xl shadow-md p-4 sm:p-6 lg:p-8 mb-2 border border-accent/30">
-          <h2 className="text-lg sm:text-2xl font-bold mb-4 sm:mb-6 text-sidebar tracking-tight">Internships</h2>
-          <div className="mb-8">
-            <h3 className="font-bold text-base sm:text-lg mb-1">
-              Front End Developer Intern,
-              <span className="font-semibold text-sm sm:text-base block">
-                Mainflow Main Flow Services and Technologies Pvt. Ltd, Ghaziabad
-              </span>
-            </h3>
-            <div className="text-xs text-gray-500 mb-3">May 2024 – July 2025</div>
-            <ul className="list-disc pl-5 sm:pl-6 text-xs sm:text-sm space-y-1">
-              <li>Developed responsive web applications using HTML, CSS, and JavaScript to enhance user experience.</li>
-              <li>Optimized front-end designs for improved functionality and visual appeal.</li>
-              <li>Utilized Visual Studio Code (VSCode) to streamline workflows and ensure timely project completion.</li>
-              <li>Applied theoretical concepts effectively to practical tasks, boosting technical proficiency.</li>
-              <li>Collaborated with cross-functional teams to address code issues, increasing project efficiency.</li>
-              <li>Facilitated knowledge-sharing and troubleshooting sessions to support team members.</li>
-              <li>Navigated technical challenges through targeted practice and problem-solving sessions.</li>
-              <li>Expanded technical skills by engaging with diverse software tools.</li>
+        </div>
+
+        {/* Content */}
+        <div className="px-8 py-6 space-y-6 print:px-4 print:py-4 print:space-y-4">
+          {/* Skills */}
+          <section>
+            <h2 className="text-blue-900 text-lg font-bold mb-2 print:text-base print:mb-1">Skills</h2>
+            <ul className="flex flex-wrap gap-x-6 gap-y-1 pl-4 text-sm list-disc print:text-xs">
+              {skills.map(({ name }) => (
+                <li key={name}>{name}</li>
+              ))}
             </ul>
-          </div>
-          <div>
-            <h3 className="font-bold text-base sm:text-lg mb-1">
-              Front End Developer Intern,
-              <span className="font-semibold text-sm sm:text-base block">
-                Gudmed, Gurgaon
-              </span>
-            </h3>
-            <div className="text-xs text-gray-500 mb-3">May 2025 – July 2025</div>
-            <ul className="list-disc pl-5 sm:pl-6 text-xs sm:text-sm space-y-1">
-              <li>
-                Built a responsive <b>medical reminder web application</b> using React.js, tailored for users to schedule and track daily medicine intake.
-              </li>
-              <li>
-                Integrated <b>Firebase Authentication</b> for secure login/signup and <b>Firebase Realtime Database</b> to manage user-specific medication schedules.
-              </li>
-              <li>
-                Implemented <b>real-time push notifications</b> using <b>Firebase Cloud Messaging (FCM)</b> to alert users on mobile/desktop about upcoming doses based on personalized time schedules.
-              </li>
-              <li>
-                Developed settings dashboard with <b>toggle controls</b> for enabling/disabling notifications (push, desktop, email), using React state management.
-              </li>
-              <li>
-                Configured <b>Firebase Hosting with GitHub Actions</b> for CI/CD deployment pipeline and automated hosting of the web app.
-              </li>
+          </section>
+
+          {/* Work History (Internships) */}
+          <section>
+            <h2 className="text-blue-900 text-lg font-bold mb-2 print:text-base print:mb-1">Work History</h2>
+            <div className="space-y-4 print:space-y-2">
+              <div>
+                <div className="font-semibold text-sm print:text-xs">Front End Developer Intern</div>
+                <div className="text-gray-700 text-xs mb-1 print:text-xs">Mainflow Main Flow Services and Technologies Pvt. Ltd, Ghaziabad | May 2024 – July 2024</div>
+                <ul className="list-disc pl-4 text-xs print:text-xs">
+                  <li>Developed responsive web applications using HTML, CSS, and JavaScript to enhance user experience.</li>
+                  <li>Optimized front-end designs for improved functionality and visual appeal.</li>
+                  <li>Collaborated with cross-functional teams to address code issues, increasing project efficiency.</li>
+                  <li>Applied theoretical concepts effectively to practical tasks, boosting technical proficiency.</li>
+                </ul>
+              </div>
+              <div>
+                <div className="font-semibold text-sm print:text-xs">Front End Developer Intern</div>
+                <div className="text-gray-700 text-xs mb-1 print:text-xs">Gudmed, Gurgaon | May 2025 – July 2025</div>
+                <ul className="list-disc pl-4 text-xs print:text-xs">
+                  <li>Built a responsive <b>medical reminder web application</b> using React.js for scheduling and tracking daily medicine intake.</li>
+                  <li>Integrated <b>Firebase Authentication</b> and <b>Firebase Realtime Database</b> to manage user-specific medication schedules.</li>
+                  <li>Implemented <b>real-time push notifications</b> using <b>Firebase Cloud Messaging (FCM)</b> to alert users about upcoming doses.</li>
+                  <li>Configured <b>Firebase Hosting with GitHub Actions</b> for CI/CD deployment pipeline.</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          {/* Education */}
+          <section>
+            <h2 className="text-blue-900 text-lg font-bold mb-2 print:text-base print:mb-1">Education</h2>
+            <div className="space-y-2 print:space-y-1">
+              <div>
+                <div className="font-semibold text-sm print:text-xs">Bachelor of Computer Applications, Christ University</div>
+                <div className="text-xs text-gray-500">GPA: 3.4/4.0 | April 2023 - Present</div>
+              </div>
+              <div>
+                <div className="font-semibold text-sm print:text-xs">Secondary Education, ST MARY'S SCHOOL</div>
+                <div className="text-xs text-gray-500">March 2023</div>
+              </div>
+            </div>
+          </section>
+
+          {/* Projects */}
+          <section>
+            <h2 className="text-blue-900 text-lg font-bold mb-2 print:text-base print:mb-1">Projects</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 print:gap-2">
+              <div>
+                <div className="font-semibold text-sm print:text-xs">Dosezen: Medical Reminder App</div>
+                <ul className="list-disc pl-4 text-xs">
+                  <li>React-based medical reminder platform</li>
+                  <li>Firebase Authentication and Database</li>
+                  <li>Cloud Messaging for notifications</li>
+                </ul>
+              </div>
+              <div>
+                <div className="font-semibold text-sm print:text-xs">BMI Calculator</div>
+                <ul className="list-disc pl-4 text-xs">
+                  <li>Vanilla JavaScript calculator</li>
+                  <li>Metric and US units support</li>
+                </ul>
+              </div>
+              <div>
+                <div className="font-semibold text-sm print:text-xs">React To-Do List App</div>
+                <ul className="list-disc pl-4 text-xs">
+                  <li>Task manager with React</li>
+                  <li>State management and CRUD operations</li>
+                </ul>
+              </div>
+              <div>
+                <div className="font-semibold text-sm print:text-xs">Banking App (Java Swing)</div>
+                <ul className="list-disc pl-4 text-xs">
+                  <li>GUI banking system with MySQL</li>
+                  <li>User registration and transactions</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          {/* Certifications */}
+          <section>
+            <h2 className="text-blue-900 text-lg font-bold mb-2 print:text-base print:mb-1">Key Certifications</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-2 print:gap-1">
+              <div>
+                <div className="font-semibold text-sm print:text-xs">DCF and C Programming</div>
+                <div className="text-xs text-gray-600">Christ University, 2023–2024</div>
+              </div>
+              <div>
+                <div className="font-semibold text-sm print:text-xs">Introduction to Python</div>
+                <div className="text-xs text-gray-600">Infosys Springboard, Aug 2024</div>
+              </div>
+              <div>
+                <div className="font-semibold text-sm print:text-xs">Java Fundamentals</div>
+                <div className="text-xs text-gray-600">Scaler Academy, Apr 2025</div>
+              </div>
+              <div>
+                <div className="font-semibold text-sm print:text-xs">Web Development Internship</div>
+                <div className="text-xs text-gray-600">Main Flow Services, 2024</div>
+              </div>
+              <div>
+                <div className="font-semibold text-sm print:text-xs">Smart Agriculture using IoT</div>
+                <div className="text-xs text-gray-600">Christ University, Apr 2024</div>
+              </div>
+              <div>
+                <div className="font-semibold text-sm print:text-xs">Computer Network</div>
+                <div className="text-xs text-gray-600">Huawei Talent, Jan 2025</div>
+              </div>
+            </div>
+          </section>
+
+          {/* Languages */}
+          <section>
+            <h2 className="text-blue-900 text-lg font-bold mb-2 print:text-base print:mb-1">Languages</h2>
+            <ul className="flex flex-wrap gap-x-6 gap-y-1 pl-4 text-sm list-disc print:text-xs">
+              {languages.map(({ name }) => (
+                <li key={name}>{name}</li>
+              ))}
             </ul>
-          </div>
-        </section>
-        <div className="border-t border-accent/30 my-2" />
-        {/* Courses */}
-        <section className="bg-white rounded-xl shadow-md p-4 sm:p-6 lg:p-8 border border-accent/30">
-          <h2 className="text-lg sm:text-2xl font-bold mb-3 text-sidebar tracking-tight">Courses</h2>
-          <div className="space-y-3">
-            <div>
-              <h3 className="font-bold text-base sm:text-lg">Introduction to Python - INFOSYS SPRINGBOOT, Infosys</h3>
-              <div className="text-xs text-gray-500 mb-1">May 2024 – July 2025</div>
-            </div>
-            <div>
-              <h3 className="font-bold text-base sm:text-lg">Java course - mastering the fundamentals, Scaler</h3>
-              <div className="text-xs text-gray-500 mb-1">August 2024 – September 2024</div>
-            </div>
-          </div>
-        </section>
-      </main>
+          </section>
+        </div>
       </div>
-      
+
       {/* PDF Download Button */}
-      <div className="fixed bottom-6 right-6 z-50 pdf-download-btn">
+      <div className="fixed bottom-6 right-6 z-50 pdf-download-btn print:hidden">
         <button
           onClick={downloadPDF}
           className="bg-[#20416a] hover:bg-[#1a3557] text-white px-6 py-3 rounded-full shadow-lg transform transition-all duration-200 hover:scale-105 flex items-center gap-2 font-semibold"
