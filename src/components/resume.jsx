@@ -84,18 +84,20 @@ if (typeof document !== 'undefined') {
   document.head.appendChild(styleElement);
 }
 
-const skills = [
-  { name: "HTML" },
-  { name: "Tailwind CSS" },
-  { name: "Java" },
-  { name: "Git" },
-  { name: "MySQL" },
-  { name: "Javascript" },
-  { name: "Swing" },
-  { name: "Kotlin" },
-  { name: "React" },
-  { name: "Firebase" },
-];
+const skillCategories = {
+  "Data Analytics": [
+    "Python (Pandas, NumPy, Matplotlib)",
+    "SQL",
+    "Excel",
+    "Power BI (basic)"
+  ],
+  "Technical Tools": [
+    "MySQL",
+    "Git",
+    "HTML/CSS (basic)",
+    "Problem Solving"
+  ]
+};
 
 const languages = [
   { name: "Hindi" },
@@ -129,7 +131,8 @@ export default function Resume() {
             <a href="https://dosezen-702e6.web.app/" target="_blank" rel="noopener noreferrer" className="underline hover:no-underline">Dosezen</a>
           </div>
           <p className="mt-4 text-sm leading-5 font-normal print:text-xs print:mt-2">
-            <b>Dynamic Front-End Developer Intern</b> with hands-on experience in web development and foundation in <b>HTML, CSS, JavaScript, and React</b>. Built and deployed a full-stack <b>Medical Reminder</b> Web App using <b>Firebase Hosting & Cloud Messaging</b>, enabling real-time push notifications to users across mobile and desktop platforms. Proven ability to enhance user experiences through responsive design and effective problem-solving.
+           <b> Aspiring Data Analyst | Python • SQL • Excel (Transitioning from Front-End Development)
+Enthusiastic learner building analytical skills in Python, SQL, and Excel. Currently transitioning from front-end development, with a strong eye for detail, structured problem-solving ability, and experience working on data-driven web projects.</b>
           </p>
         </div>
 
@@ -138,11 +141,18 @@ export default function Resume() {
           {/* Skills */}
           <section>
             <h2 className="text-blue-900 text-lg font-bold mb-2 print:text-base print:mb-1">Skills</h2>
-            <ul className="flex flex-wrap gap-x-6 gap-y-1 pl-4 text-sm list-disc print:text-xs">
-              {skills.map(({ name }) => (
-                <li key={name}>{name}</li>
+            <div className="space-y-2 print:space-y-1">
+              {Object.entries(skillCategories).map(([category, skills]) => (
+                <div key={category}>
+                  <h3 className="text-sm font-semibold text-gray-800 print:text-xs">{category}:</h3>
+                  <ul className="flex flex-wrap gap-x-6 gap-y-1 pl-4 text-sm list-disc print:text-xs">
+                    {skills.map((skill) => (
+                      <li key={skill}>{skill}</li>
+                    ))}
+                  </ul>
+                </div>
               ))}
-            </ul>
+            </div>
           </section>
 
           {/* Work History (Internships) */}
@@ -153,20 +163,20 @@ export default function Resume() {
                 <div className="font-semibold text-sm print:text-xs">Front End Developer Intern</div>
                 <div className="text-gray-700 text-xs mb-1 print:text-xs">Mainflow Main Flow Services and Technologies Pvt. Ltd, Ghaziabad | May 2024 – July 2024</div>
                 <ul className="list-disc pl-4 text-xs print:text-xs">
-                  <li>Developed responsive web applications using HTML, CSS, and JavaScript to enhance user experience.</li>
-                  <li>Optimized front-end designs for improved functionality and visual appeal.</li>
-                  <li>Collaborated with cross-functional teams to address code issues, increasing project efficiency.</li>
-                  <li>Applied theoretical concepts effectively to practical tasks, boosting technical proficiency.</li>
+                  <li>Developed responsive web pages using HTML, CSS, and JavaScript to enhance user interaction and performance.</li>
+                  <li>Used debugging and testing tools to analyze page metrics and improve efficiency.</li>
+                  <li>Collaborated with the backend team to ensure smooth data flow and UI consistency.</li>
+                  <li>Strengthened logical thinking and structured problem-solving through project execution.</li>
                 </ul>
               </div>
               <div>
                 <div className="font-semibold text-sm print:text-xs">Front End Developer Intern</div>
                 <div className="text-gray-700 text-xs mb-1 print:text-xs">Gudmed, Gurgaon | May 2025 – July 2025</div>
                 <ul className="list-disc pl-4 text-xs print:text-xs">
-                  <li>Built a responsive <b>medical reminder web application</b> using React.js for scheduling and tracking daily medicine intake.</li>
-                  <li>Integrated <b>Firebase Authentication</b> and <b>Firebase Realtime Database</b> to manage user-specific medication schedules.</li>
-                  <li>Implemented <b>real-time push notifications</b> using <b>Firebase Cloud Messaging (FCM)</b> to alert users about upcoming doses.</li>
-                  <li>Configured <b>Firebase Hosting with GitHub Actions</b> for CI/CD deployment pipeline.</li>
+                  <li>Built a medical reminder web application using React.js to track and visualize daily medicine intake.</li>
+                  <li>Worked with Firebase Realtime Database to manage structured user data.</li>
+                  <li>Designed UI components that display medication logs and alert notifications using FCM.</li>
+                  <li>Gained experience handling real-time data and understanding user engagement patterns.</li>
                 </ul>
               </div>
             </div>
@@ -227,6 +237,10 @@ export default function Resume() {
           <section>
             <h2 className="text-blue-900 text-lg font-bold mb-2 print:text-base print:mb-1">Key Certifications</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-2 print:gap-1">
+              <div>
+                <div className="font-semibold text-sm print:text-xs">Data Analytics (Self-Learning, Ongoing)</div>
+                <div className="text-xs text-gray-600">Top Varsity</div>
+              </div>
               <div>
                 <div className="font-semibold text-sm print:text-xs">DCF and C Programming</div>
                 <div className="text-xs text-gray-600">Christ University, 2023–2024</div>
