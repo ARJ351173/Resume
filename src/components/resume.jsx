@@ -29,7 +29,8 @@ const skillCategories = {
     "Python (Pandas, NumPy, Matplotlib)",
     "SQL",
     "Excel",
-    "Power BI (basic)"
+    "Power BI (basic)",
+    "Tableau (basic)"
   ],
   "Technical Tools": [
     "MySQL",
@@ -66,7 +67,7 @@ export default function Resume() {
         <header className="text-center mb-4">
           <h1 className="text-3xl font-bold text-gray-900">Aryan Jain</h1>
           <p className="text-sm mt-1">
-            Christ University, Bangalore, India
+            Christ University, Delhi NCR, India
           </p>
           <p className="text-xs text-gray-700 mt-1">
             <a href="tel:8130501945">8130501945</a> • 
@@ -156,15 +157,17 @@ export default function Resume() {
         <section>
           <h2 className="text-md font-bold uppercase mb-1 text-gray-900">Projects</h2>
 
-          <div className="mt-2">
-            <p className="font-semibold text-sm text-gray-900">Dosezen: Medical Reminder App</p>
-            <ul className="list-disc pl-5 text-[11px] text-gray-700">
-              <li>Developed a full-stack medical reminder web app using React.js and Firebase, enabling users to track daily medication schedules.</li>
-              <li>Implemented Firebase Authentication and Realtime Database for secure handling of 100+ user records.</li>
-              <li>Configured Firebase Cloud Messaging (FCM) achieving 98% delivery success rate.</li>
-              <li>Deployed on Firebase Hosting with GitHub Actions CI/CD ensuring zero downtime.</li>
-            </ul>
-          </div>
+         <div className="mt-2">
+  <p className="font-semibold text-sm text-gray-900">Retail Consumer Behavior Analysis</p>
+  <ul className="list-disc pl-5 text-[11px] text-gray-700">
+    <li>Executed a full-stack data analytics project combining <b>Python, SQL, and Power BI</b> to analyze customer shopping behavior for a retail company.</li>
+    <li>Cleaned and transformed raw transactional data using Python (pandas, NumPy) for accurate analysis and modeling.</li>
+    <li>Built relational database schemas in MySQL and executed analytical queries to uncover patterns in customer loyalty, sales channels, and purchase drivers.</li>
+    <li>Developed an interactive <b>Power BI dashboard</b> visualizing sales trends, demographics, and payment preferences, enabling data-driven decision-making.</li>
+    <li>Derived actionable insights and recommendations to optimize marketing strategies and improve customer retention.</li>
+    <li>Published all scripts, SQL queries, and reports in a structured <b>GitHub repository</b> for transparent documentation.</li>
+  </ul>
+</div>
 
           <div className="mt-3">
             <p className="font-semibold text-sm text-gray-900">End-to-End SQL Analysis</p>
@@ -184,11 +187,8 @@ export default function Resume() {
           <h2 className="text-md font-bold uppercase mb-1 text-gray-900">Certificates</h2>
           <ul className="list-disc pl-5 text-[11px] text-gray-700">
             <li>Data Analytics (Self-Learning, Ongoing) — Top Varsity</li>
-            <li>DCF and C Programming — Christ University, 2023–2024</li>
             <li>Introduction to Python — Infosys Springboard, Aug 2024</li>
-            <li>Java Fundamentals — Scaler Academy, Apr 2025</li>
             <li>Web Development Internship — Main Flow Services, 2024</li>
-            <li>Smart Agriculture using IoT — Christ University, Apr 2024</li>
             <li>Computer Network — Huawei Talent, Jan 2025</li>
             <li>SQL: Basic to Advanced Skills for Analysts & Engineers — Udemy, Oct 2025</li>
           </ul>
