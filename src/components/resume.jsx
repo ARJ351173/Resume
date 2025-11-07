@@ -61,15 +61,15 @@ export default function Resume() {
 
   return (
     <div className="min-h-screen bg-gray-100 py-10 flex justify-center print:bg-white print:py-0">
-      <div className="bg-white w-full max-w-3xl shadow-md rounded-md p-10 text-gray-900 print:shadow-none print:rounded-none">
+      <div className="bg-white w-full max-w-3xl shadow-md rounded-md p-5 text-gray-900 print:shadow-none print:rounded-none">
         
         {/* Header */}
-        <header className="text-center mb-4">
+        <header className="text-center mb-1.5">
           <h1 className="text-3xl font-bold text-gray-900">Aryan Jain</h1>
-          <p className="text-sm mt-1">
+          <p className="text-sm mt-0.5">
             Christ University, Delhi NCR, India
           </p>
-          <p className="text-xs text-gray-700 mt-1">
+          <p className="text-xs text-gray-700 mt-0.5">
             <a href="tel:8130501945">8130501945</a> • 
             <a href="mailto:AryanJain536@gmail.com" className="mx-1 underline">AryanJain536@gmail.com</a> • 
             <a href="https://github.com/ARJ351173" className="underline" target="_blank" rel="noreferrer">Github</a> • 
@@ -78,46 +78,42 @@ export default function Resume() {
           </p>
         </header>
 
-        <hr className="border-gray-400 my-4" />
+        <hr className="border-gray-400 my-1.5" />
 
         {/* Professional Summary */}
         <section>
-          <h2 className="text-md font-bold uppercase mb-1 text-gray-900">Professional Summary</h2>
-          <p className="text-[11px] text-gray-800 leading-relaxed">
+          <h2 className="text-md font-bold uppercase mb-0.5 text-gray-900">Professional Summary</h2>
+          <p className="text-[11px] text-gray-800 leading-tight">
             Technology graduate with a strong foundation in <b>Python, SQL, and Excel</b>, aiming to advance into data-focused analytical roles. Builds on front-end development experience to perform <b>data analysis, reporting, and visualization</b>, transforming insights into measurable business outcomes and efficiency improvements.
           </p>
         </section>
 
-        <hr className="border-gray-300 my-3" />
+        <hr className="border-gray-300 my-1.5" />
 
         {/* Skills */}
         <section>
-          <h2 className="text-md font-bold uppercase mb-1 text-gray-900">Skills</h2>
-          <div className="space-y-2">
+          <h2 className="text-md font-bold uppercase mb-0.5 text-gray-900">Skills</h2>
+          <div className="space-y-1">
             {Object.entries(skillCategories).map(([category, skills]) => (
               <div key={category}>
                 <p className="font-semibold text-sm text-gray-800">{category}:</p>
-                <ul className="list-disc pl-5 text-[11px] text-gray-700">
-                  {skills.map((skill) => (
-                    <li key={skill}>{skill}</li>
-                  ))}
-                </ul>
+                <p className="text-[11px] text-gray-700">{skills.join(' • ')}</p>
               </div>
             ))}
           </div>
         </section>
 
-        <hr className="border-gray-300 my-3" />
+        <hr className="border-gray-300 my-1.5" />
 
         {/* Work Experience */}
         <section>
-          <h2 className="text-md font-bold uppercase mb-1 text-gray-900">Work Experience</h2>
+          <h2 className="text-md font-bold uppercase mb-0.5 text-gray-900">Work Experience</h2>
 
-          <div className="mt-2">
+          <div className="mt-0.5">
             <p className="font-semibold text-sm text-gray-900">
               Gudmed — Front-End Developer Intern
             </p>
-            <p className="text-xs text-gray-600 mb-1">Gurgaon | May 2025 – July 2025</p>
+            <p className="text-xs text-gray-600 mb-0.5">Gurgaon | May 2025 – July 2025</p>
             <ul className="list-disc pl-5 text-[11px] text-gray-700">
               <li>Built a medical reminder web app using React.js to record and visualize daily medicine intake for 100+ test users.</li>
               <li>Integrated Firebase Realtime Database to manage and analyze structured user medication data with zero-error synchronization.</li>
@@ -126,11 +122,11 @@ export default function Resume() {
             </ul>
           </div>
 
-          <div className="mt-3">
+          <div className="mt-1">
             <p className="font-semibold text-sm text-gray-900">
               Main Flow Services and Technologies Pvt. Ltd — Front-End Developer Intern
             </p>
-            <p className="text-xs text-gray-600 mb-1">Ghaziabad | May 2024 – July 2024</p>
+            <p className="text-xs text-gray-600 mb-0.5">Ghaziabad | May 2024 – July 2024</p>
             <ul className="list-disc pl-5 text-[11px] text-gray-700">
               <li>Developed responsive web pages using HTML, CSS, and JavaScript, improving page load speed by ~20% and enhancing user interaction.</li>
               <li>Used debugging and testing tools (Chrome DevTools, Lighthouse) to analyze performance metrics, improving efficiency by 15%.</li>
@@ -140,24 +136,24 @@ export default function Resume() {
           </div>
         </section>
 
-        <hr className="border-gray-300 my-3" />
+        <hr className="border-gray-300 my-1.5" />
 
         {/* Education */}
         <section>
-          <h2 className="text-md font-bold uppercase mb-1 text-gray-900">Education</h2>
+          <h2 className="text-md font-bold uppercase mb-0.5 text-gray-900">Education</h2>
           <p className="font-semibold text-sm text-gray-900">Christ University — Bachelor of Computer Applications</p>
-          <p className="text-xs text-gray-600 mb-1">Bangalore | Apr 2023 – Present | GPA: 3.4/4.0</p>
-          <p className="font-semibold text-sm text-gray-900 mt-2">St. Mary’s School — Secondary Education</p>
+          <p className="text-xs text-gray-600 mb-0.5">Bangalore | Apr 2023 – Present | GPA: 3.4/4.0</p>
+          <p className="font-semibold text-sm text-gray-900 mt-1">St. Mary’s School — Secondary Education</p>
           <p className="text-xs text-gray-600">Mar 2023</p>
         </section>
 
-        <hr className="border-gray-300 my-3" />
+        <hr className="border-gray-300 my-1.5" />
 
         {/* Projects */}
         <section>
-          <h2 className="text-md font-bold uppercase mb-1 text-gray-900">Projects</h2>
+          <h2 className="text-md font-bold uppercase mb-0.5 text-gray-900">Projects</h2>
 
-         <div className="mt-2">
+         <div className="mt-0.5">
   <p className="font-semibold text-sm text-gray-900">Retail Consumer Behavior Analysis</p>
   <ul className="list-disc pl-5 text-[11px] text-gray-700">
     <li>Executed a full-stack data analytics project combining <b>Python, SQL, and Power BI</b> to analyze customer shopping behavior for a retail company.</li>
@@ -169,7 +165,7 @@ export default function Resume() {
   </ul>
 </div>
 
-          <div className="mt-3">
+          <div className="mt-1">
             <p className="font-semibold text-sm text-gray-900">End-to-End SQL Analysis</p>
             <ul className="list-disc pl-5 text-[11px] text-gray-700">
               <li>Developed a 3-table relational database (~2,000 records) using SQL DDL/DML with proper keys and constraints.</li>
@@ -180,11 +176,11 @@ export default function Resume() {
           </div>
         </section>
 
-        <hr className="border-gray-300 my-3" />
+        <hr className="border-gray-300 my-1.5" />
 
         {/* Certifications */}
         <section>
-          <h2 className="text-md font-bold uppercase mb-1 text-gray-900">Certificates</h2>
+          <h2 className="text-md font-bold uppercase mb-0.5 text-gray-900">Certificates</h2>
           <ul className="list-disc pl-5 text-[11px] text-gray-700">
             <li>Data Analytics (Self-Learning, Ongoing) — Top Varsity</li>
             <li>Introduction to Python — Infosys Springboard, Aug 2024</li>
@@ -194,18 +190,14 @@ export default function Resume() {
           </ul>
         </section>
 
-        <hr className="border-gray-300 my-3" />
+        <hr className="border-gray-300 my-1.5" />
 
         {/* Languages with proficiency */}
         <section>
-          <h2 className="text-md font-bold uppercase mb-1 text-gray-900">Languages</h2>
-          <ul className="list-disc pl-5 text-[11px] text-gray-700">
-            {languages.map(({ name, level }) => (
-              <li key={name}>
-                {name} — <span className="text-gray-600 italic">{level}</span>
-              </li>
-            ))}
-          </ul>
+          <h2 className="text-md font-bold uppercase mb-0.5 text-gray-900">Languages</h2>
+          <p className="text-[11px] text-gray-700">
+            {languages.map(({ name, level }) => `• ${name} (${level})`).join(' ')}
+          </p>
         </section>
       </div>
 
