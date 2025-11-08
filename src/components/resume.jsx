@@ -93,14 +93,9 @@ export default function Resume() {
         {/* Skills */}
         <section>
           <h2 className="text-md font-bold uppercase mb-0.5 text-gray-900">Skills</h2>
-          <div className="space-y-1">
-            {Object.entries(skillCategories).map(([category, skills]) => (
-              <div key={category}>
-                <p className="font-semibold text-sm text-gray-800">{category}:</p>
-                <p className="text-[11px] text-gray-700">{skills.join(' • ')}</p>
-              </div>
-            ))}
-          </div>
+          <p className="text-[11px] text-gray-700">
+            <b>Data Analytics:</b> {skillCategories['Data Analytics'].join(' • ')}  <b>Technical Tools:</b> {skillCategories['Technical Tools'].join(' • ')}
+          </p>
         </section>
 
         <hr className="border-gray-300 my-1.5" />
