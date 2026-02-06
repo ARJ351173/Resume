@@ -339,9 +339,26 @@ export default function Resume() {
             Certifications
           </h2>
 
-          <p className="text-[10px] text-gray-700 leading-snug">
-            SQL: Basic to Advanced (Udemy, Oct 2025) • Introduction to Python (Infosys Springboard, Aug 2024) • Data Analytics Program (Top Varsity, Ongoing) • Computer Network (Huawei Talent, Jan 2025) • Web Development (Main Flow Services, 2024)
-          </p>
+          <ul className="list-disc pl-4 text-[10px] text-gray-700 space-y-0.5">
+            <li>
+              <b>Deloitte Data Analytics Job Simulation</b> (Forage, Feb 2026)
+            </li>
+            <li>
+              <b>SQL: Basic to Advanced</b> (Udemy, Oct 2025)
+            </li>
+            <li>
+              <b>Introduction to Python</b> (Infosys Springboard, Aug 2024)
+            </li>
+            <li>
+              <b>Data Analytics Program</b> (Top Varsity, Ongoing)
+            </li>
+            <li>
+              <b>Computer Network</b> (Huawei Talent, Jan 2025)
+            </li>
+            <li>
+              <b>Web Development</b> (Main Flow Services, 2024)
+            </li>
+          </ul>
         </section>
 
         <hr className="border-gray-300 my-1" />
