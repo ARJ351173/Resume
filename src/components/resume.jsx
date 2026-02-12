@@ -43,7 +43,30 @@ const skillCategories = {
   ],
   Databases: ["MySQL", "SQLite"],
   "Tools & Development": ["Git/GitHub", "HTML/CSS (basic)", "JavaScript (basic)", "React (basic)"],
-  Strengths: ["Data Cleaning", "Exploratory Data Analysis (EDA)", "Reporting", "Problem Solving"],
+  Strengths: [
+    "Data Cleaning",
+    "Exploratory Data Analysis (EDA)",
+    "Reporting",
+    "Problem Solving",
+    "Data Analysis",
+    "Data Modeling",
+    "Data Visualization Tools",
+    "Spreadsheet Skills",
+    "AI Analytics",
+    "AI Strategy",
+    "Analytical Reporting",
+    "Business Communication",
+    "Data Interpretation",
+    "Data Quality Management",
+    "Decision Making",
+    "Ethical Reasoning",
+    "Model Selection",
+    "Model Validation",
+    "Predictive Analytics",
+    "Process Automation",
+    "Regulatory Compliance",
+    "Strategic Thinking",
+  ],
 };
 
 const languages = [
@@ -341,7 +364,10 @@ export default function Resume() {
 
           <ul className="list-disc pl-4 text-[10px] text-gray-700 space-y-0.5">
             <li>
-              <b>Deloitte Data Analytics Job Simulation</b> (Forage, Feb 2026)
+              <b>Deloitte Australia Data Analytics Job Simulation</b> (Forage, Feb 2026)
+            </li>
+            <li>
+              <b>Tata Group Data Analytics Job Simulation</b> (Forage, Feb 2026)
             </li>
             <li>
               <b>SQL: Basic to Advanced</b> (Udemy, Oct 2025)
