@@ -44,28 +44,42 @@ const skillCategories = {
   Databases: ["MySQL", "SQLite"],
   "Tools & Development": ["Git/GitHub", "HTML/CSS (basic)", "JavaScript (basic)", "React (basic)"],
   Strengths: [
+    "Commercial Thinking",
+    "Communication Skills",
     "Data Cleaning",
     "Exploratory Data Analysis (EDA)",
     "Reporting",
     "Problem Solving",
     "Data Analysis",
     "Data Modeling",
+    "Data Validation",
     "Data Visualization Tools",
+    "Presentation Skills",
+    "Programming",
     "Spreadsheet Skills",
     "AI Analytics",
     "AI Strategy",
     "Analytical Reporting",
     "Business Communication",
+    "Computer Networking",
     "Data Interpretation",
     "Data Quality Management",
+    "Data Structures",
+    "Formal Communication",
+    "Log Analysis",
+    "Planning",
+    "Python Programming",
+    "Software Development",
     "Decision Making",
     "Ethical Reasoning",
     "Model Selection",
     "Model Validation",
+    "Statistical Analysis",
     "Predictive Analytics",
     "Process Automation",
     "Regulatory Compliance",
     "Strategic Thinking",
+    "Web Security",
   ],
 };
 
@@ -388,6 +402,9 @@ export default function Resume() {
             </li>
             <li>
               <b>Tata Group Data Analytics Job Simulation</b> (Forage, Feb 2026)
+            </li>
+            <li>
+              <b>Quantium Data Analytics Job Simulation</b> (Forage, Feb 2026)
             </li>
             <li>
               <b>SQL: Basic to Advanced</b> (Udemy, Oct 2025)
