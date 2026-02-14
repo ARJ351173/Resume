@@ -190,6 +190,26 @@ export default function Resume() {
         <hr className="border-gray-300 my-1" />
 
         {/* =========================
+            AI & GENERATIVE AI TOOLS
+        ========================= */}
+        <section>
+          <h2 className="text-sm font-bold uppercase mb-0.5 text-gray-900">
+            AI & Generative AI Tools
+          </h2>
+
+          <div className="text-[10px] text-gray-700 space-y-0">
+            <p className="text-[10px] text-gray-700">
+              <b>GenAI Integration:</b> GitHub Copilot, Claude AI, ChatGPT — Used for code optimization, documentation, debugging, and rapid prototyping; <b>~25% improvement in development speed</b> and code quality.
+            </p>
+            <p className="text-[10px] text-gray-700 mt-0.5">
+              <b>AI-Driven Analysis:</b> Leveraging generative AI for data insights, report generation, and predictive modeling to enhance analytical efficiency and deliver comprehensive business recommendations.
+            </p>
+          </div>
+        </section>
+
+        <hr className="border-gray-300 my-1" />
+
+        {/* =========================
             WORK EXPERIENCE
         ========================= */}
         <section>
