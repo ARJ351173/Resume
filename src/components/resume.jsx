@@ -199,10 +199,10 @@ export default function Resume() {
 
           <div className="text-[10px] text-gray-700 space-y-0">
             <p className="text-[10px] text-gray-700">
-              <b>GenAI Integration:</b> GitHub Copilot, Claude AI, ChatGPT — Used for code optimization, documentation, debugging, and rapid prototyping; <b>~25% improvement in development speed</b> and code quality.
+              <b>GenAI Integration:</b> GitHub Copilot, Claude AI, ChatGPT, PowerPoint — Used for code optimization, documentation, debugging, presentation creation, and rapid prototyping; <b>~25% improvement in development speed</b> and content quality.
             </p>
             <p className="text-[10px] text-gray-700 mt-0.5">
-              <b>AI-Driven Analysis:</b> Leveraging generative AI for data insights, report generation, and predictive modeling to enhance analytical efficiency and deliver comprehensive business recommendations.
+              <b>AI-Driven Analysis:</b> Leveraging generative AI for data insights, report generation, predictive modeling, and presentation development to enhance analytical efficiency and deliver comprehensive business recommendations.
             </p>
           </div>
         </section>
