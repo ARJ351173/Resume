@@ -398,6 +398,9 @@ export default function Resume() {
 
           <ul className="list-disc pl-4 text-[10px] text-gray-700 space-y-0.5">
             <li>
+              <b>Complete MySQL Bootcamp: Learn SQL Step by Step</b> (Udemy, Feb 2026)
+            </li>
+            <li>
               <b>Deloitte Australia Data Analytics Job Simulation</b> (Forage, Feb 2026)
             </li>
             <li>
