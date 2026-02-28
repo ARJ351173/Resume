@@ -1,4 +1,4 @@
-import Resume from "./components/resume_copy";
+import Resume from "./components/resume";
 
 function App() {
   return <Resume />;
