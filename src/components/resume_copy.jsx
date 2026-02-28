@@ -93,7 +93,7 @@ const languages = [
 export default function Resume() {
   const downloadPDF = () => {
     const link = document.createElement("a");
-    link.href = "/Aryan_Jain_Resume.pdf";
+    link.href = "/Aryan_Jain_Resume1.pdf";
     link.download = "Aryan_Jain_Resume.pdf";
     link.target = "_blank";
     document.body.appendChild(link);
@@ -107,7 +107,20 @@ export default function Resume() {
         {/* =========================
             HEADER
         ========================= */}
-        <header className="text-center mb-1">
+        <header className="mb-1 grid grid-cols-[80px_1fr_80px] items-start gap-2">
+          <div className="relative h-24 w-20 overflow-hidden border border-gray-400 bg-gray-50">
+            <div className="absolute inset-0 flex items-center justify-center text-[8px] text-gray-500">
+              Photo
+            </div>
+            <img
+              src="/profile.png"
+              alt="Aryan Jain"
+              className="relative z-10 h-full w-full object-cover"
+              style={{ display: "block" }}
+            />
+          </div>
+
+          <div className="text-center">
             <h1 className="text-2xl font-bold text-gray-900">Aryan Jain</h1>
 
             <p className="text-xs mt-0.5 text-gray-800">
@@ -150,7 +163,9 @@ export default function Resume() {
                 Portfolio
               </a>
             </p>
-          
+          </div>
+
+          <div />
         </header>
 
         <hr className="border-gray-400 my-1" />
