@@ -107,7 +107,7 @@ export default function Resume() {
         {/* =========================
             HEADER
         ========================= */}
-        <header className="mb-1 grid grid-cols-[80px_1fr_80px] items-start gap-2">
+        <header className="mb-1 flex items-start gap-2">
           <div className="relative h-24 w-20 overflow-hidden border border-gray-400 bg-gray-50">
             <div className="absolute inset-0 flex items-center justify-center text-[8px] text-gray-500">
               Photo
@@ -120,7 +120,7 @@ export default function Resume() {
             />
           </div>
 
-          <div className="text-center">
+          <div className="text-left flex-1">
             <h1 className="text-2xl font-bold text-gray-900">Aryan Jain</h1>
 
             <p className="text-xs mt-0.5 text-gray-800">
@@ -164,8 +164,6 @@ export default function Resume() {
               </a>
             </p>
           </div>
-
-          <div />
         </header>
 
         <hr className="border-gray-400 my-1" />
@@ -179,15 +177,35 @@ export default function Resume() {
           </h2>
 
           <p className="text-[10px] text-gray-800 leading-snug">
-            Data Analytics-focused BCA graduate skilled in{" "}
-            <b>Python, SQL, Excel, and Power BI</b>, with experience building
-            dashboards, analytical reports, and structured datasets for
-            decision-making. Strong foundation in{" "}
-            <b>data cleaning, transformation, querying, and visualization</b>{" "}
-            to uncover trends and deliver actionable insights. Combines
-            technical development experience with analytical thinking to support
-            business outcomes and operational efficiency.
+            Data Analytics-focused BCA graduate skilled in <b>Python, SQL, Excel, and Power BI</b>, with experience building dashboards, analytical reports, and structured datasets for decision-making. Strong foundation in <b>data cleaning, transformation, querying, and visualization</b> to uncover trends and deliver actionable insights. Combines technical development experience with analytical thinking to support business outcomes and operational efficiency.
           </p>
+        </section>
+
+        <hr className="border-gray-300 my-1" />
+
+        {/* =========================
+            EDUCATION
+        ========================= */}
+        <section>
+          <h2 className="text-sm font-bold uppercase mb-0.5 text-gray-900">
+            Education
+          </h2>
+
+          <div className="mt-0.5">
+            <p className="font-semibold text-xs text-gray-900">
+              Christ University — Bachelor of Computer Applications (BCA)
+            </p>
+            <p className="text-[10px] text-gray-600">
+              Delhi NCR | Apr 2023 – Present | GPA: 3.4/4.0
+            </p>
+          </div>
+
+          <div className="mt-0.5">
+            <p className="font-semibold text-xs text-gray-900">
+              St. Mary's School — Secondary Education
+            </p>
+            <p className="text-[10px] text-gray-600">Mar 2023</p>
+          </div>
         </section>
 
         <hr className="border-gray-300 my-1" />
@@ -200,41 +218,28 @@ export default function Resume() {
             Skills
           </h2>
 
-          <div className="text-[10px] text-gray-700 space-y-0">
-            <p className="text-[9.5px] text-gray-700">
-              <b>Analytics & BI:</b> {skillCategories["Analytics & BI"].join(" • ")}
-            </p>
-            <p>
-              <b>Databases:</b> {skillCategories["Databases"].join(" • ")}
-            </p>
-            <p>
-              <b>Tools & Development:</b>{" "}
-              {skillCategories["Tools & Development"].join(" • ")}
-            </p>
-            <p>
-              <b>Core Strengths:</b> {skillCategories["Strengths"].join(" • ")}
-            </p>
-          </div>
+          <ul className="list-disc pl-4 text-[10px] text-gray-700 space-y-0">
+            <li className="text-[9.5px]"><b>Analytics & BI:</b> {skillCategories["Analytics & BI"].join(" • ")}</li>
+            <li><b>Databases:</b> {skillCategories["Databases"].join(" • ")}</li>
+            <li><b>Tools & Development:</b> {skillCategories["Tools & Development"].join(" • ")}</li>
+            <li><b>Core Strengths:</b> {skillCategories["Strengths"].join(" • ")}</li>
+          </ul>
         </section>
 
         <hr className="border-gray-300 my-1" />
 
         {/* =========================
-            AI & GENERATIVE AI TOOLS
+            TECHNICAL SKILLS
         ========================= */}
         <section>
           <h2 className="text-sm font-bold uppercase mb-0.5 text-gray-900">
-            AI & Generative AI Tools
+            Technical Skills
           </h2>
 
-          <div className="text-[10px] text-gray-700 space-y-0">
-            <p className="text-[10px] text-gray-700">
-              <b>GenAI Integration:</b> GitHub Copilot, Claude AI, ChatGPT, PowerPoint — Used for code optimization, documentation, debugging, presentation creation, and rapid prototyping; <b>~25% improvement in development speed</b> and content quality.
-            </p>
-            <p className="text-[10px] text-gray-700 mt-0.5">
-              <b>AI-Driven Analysis:</b> Leveraging generative AI for data insights, report generation, predictive modeling, and presentation development to enhance analytical efficiency and deliver comprehensive business recommendations.
-            </p>
-          </div>
+          <ul className="list-disc pl-4 text-[10px] text-gray-700 space-y-0">
+            <li><b>GenAI Integration:</b> GitHub Copilot, Claude AI, ChatGPT, PowerPoint for coding, debugging, docs, and presentations; <b>~25% faster delivery</b>.</li>
+            <li><b>AI-Driven Analysis:</b> Applied GenAI for data insights, reporting, predictive modeling support, and business recommendations.</li>
+          </ul>
         </section>
 
         <hr className="border-gray-300 my-1" />
@@ -314,35 +319,6 @@ export default function Resume() {
           </div>
         </section>
 
-        <hr className="border-gray-300 my-1" />
-
-        {/* =========================
-            EDUCATION
-        ========================= */}
-        <section>
-          <h2 className="text-sm font-bold uppercase mb-0.5 text-gray-900">
-            Education
-          </h2>
-
-          <div className="mt-0.5">
-            <p className="font-semibold text-xs text-gray-900">
-              Christ University — Bachelor of Computer Applications (BCA)
-            </p>
-            <p className="text-[10px] text-gray-600">
-              Delhi NCR | Apr 2023 – Present | GPA: 3.4/4.0
-            </p>
-          </div>
-
-          <div className="mt-0.5">
-            <p className="font-semibold text-xs text-gray-900">
-              St. Mary's School — Secondary Education
-            </p>
-            <p className="text-[10px] text-gray-600">Mar 2023</p>
-          </div>
-        </section>
-
-        <hr className="border-gray-300 my-1" />
-
        {/* =========================
     PROJECTS
 ========================= */}
@@ -412,18 +388,17 @@ export default function Resume() {
             Certifications
           </h2>
 
-          <div className="grid grid-cols-2 gap-x-3 gap-y-0.5 text-[10px] text-gray-700">
-            <p><b>Deloitte Australia Data Analytics Job Simulation</b> (Forage, Feb 2026)</p>
-            <p><b>Tata Group Data Analytics Job Simulation</b> (Forage, Feb 2026)</p>
-            <p><b>Quantium Data Analytics Job Simulation</b> (Forage, Feb 2026)</p>
-            <p><b>SQL: Basic to Advanced</b> (Udemy, Oct 2025)</p>
-            <p><b>Introduction to Python</b> (Infosys Springboard, Aug 2024)</p>
-            <p><b>Data Analytics Program</b> (Top Varsity, Ongoing)</p>
-            <p><b>Computer Network</b> (Huawei Talent, Jan 2025)</p>
-            <p><b>Web Development</b> (Main Flow Services, 2024)</p>
-            <p><b>Complete MySQL Bootcamp: Learn SQL Step by Step</b> (Udemy, Feb 2026)</p>
-
-          </div>
+          <ul className="list-disc pl-4 grid grid-cols-2 gap-x-3 gap-y-0.5 text-[10px] text-gray-700">
+            <li><b>Deloitte Australia Data Analytics Job Simulation</b> (Forage, Feb 2026)</li>
+            <li><b>Tata Group Data Analytics Job Simulation</b> (Forage, Feb 2026)</li>
+            <li><b>Quantium Data Analytics Job Simulation</b> (Forage, Feb 2026)</li>
+            <li><b>SQL: Basic to Advanced</b> (Udemy, Oct 2025)</li>
+            <li><b>Introduction to Python</b> (Infosys Springboard, Aug 2024)</li>
+            <li><b>Data Analytics Program</b> (Top Varsity, Ongoing)</li>
+            <li><b>Computer Network</b> (Huawei Talent, Jan 2025)</li>
+            <li><b>Web Development</b> (Main Flow Services, 2024)</li>
+            <li><b>Complete MySQL Bootcamp: Learn SQL Step by Step</b> (Udemy, Feb 2026)</li>
+          </ul>
         </section>
 
         <hr className="border-gray-300 my-1" />
@@ -436,11 +411,11 @@ export default function Resume() {
             Languages
           </h2>
 
-          <p className="text-[10px] text-gray-700">
-            {languages
-              .map(({ name, level }) => `• ${name} (${level})`)
-              .join(" ")}
-          </p>
+          <ul className="list-disc pl-4 text-[10px] text-gray-700 grid grid-cols-2 gap-y-0">
+            {languages.map(({ name, level }) => (
+              <li key={name}>{name} ({level})</li>
+            ))}
+          </ul>
         </section>
       </div>
 
