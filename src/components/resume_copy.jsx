@@ -123,10 +123,6 @@ export default function Resume() {
           <div className="text-left flex-1">
             <h1 className="text-2xl font-bold text-gray-900">Aryan Jain</h1>
 
-            <p className="text-xs mt-0.5 text-gray-800">
-              Christ University, Delhi NCR, India
-            </p>
-
             <p className="text-[10px] text-gray-700 mt-0.5">
               <a href="tel:8130501945">+91 8130501945</a> •{" "}
               <a
@@ -177,7 +173,7 @@ export default function Resume() {
           </h2>
 
           <p className="text-[10px] text-gray-800 leading-snug">
-            Data Analytics-focused BCA graduate skilled in <b>Python, SQL, Excel, and Power BI</b>, with experience building dashboards, analytical reports, and structured datasets for decision-making. Strong foundation in <b>data cleaning, transformation, querying, and visualization</b> to uncover trends and deliver actionable insights. Combines technical development experience with analytical thinking to support business outcomes and operational efficiency.
+           BCA graduate with strong skills in <b>Python, SQL, Excel, and Power BI,</b>  experienced in developing <b>dashboards, analytical reports, and structured datasets</b>  to support data-driven decision-making. Proficient in <b> data cleaning, transformation, and visualization</b> to identify trends and generate actionable insights. Brings a blend of technical development experience and analytical thinking to improve business outcomes and efficiency.
           </p>
         </section>
 
@@ -318,6 +314,8 @@ export default function Resume() {
             </ul>
           </div>
         </section>
+
+                <hr className="border-gray-300 my-1" />
 
        {/* =========================
     PROJECTS
