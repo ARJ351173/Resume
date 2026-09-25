@@ -41,45 +41,30 @@ const skillCategories = {
     "Power BI (Dashboards, DAX basics)",
     "Tableau (basic)",
   ],
-  Databases: ["MySQL", "SQLite"],
-  "Tools & Development": ["Git/GitHub", "HTML/CSS (basic)", "JavaScript (basic)", "React (basic)"],
+  "ERP & MIS": [
+    "ERP Implementation",
+    "ERP Administration",
+    "MIS Reporting",
+    "User Training",
+    "Requirement Gathering",
+    "User Acceptance Testing (UAT)",
+    "Process Digitization",
+    "QR/Barcode Labelling",
+    "Sales Analysis",
+  ],
+  "Databases & Tools": ["MySQL", "Git/GitHub"],
   Strengths: [
-    "Commercial Thinking",
-    "Communication Skills",
-    "Data Cleaning",
+    "Data Cleaning & Validation",
     "Exploratory Data Analysis (EDA)",
-    "Reporting",
-    "Problem Solving",
-    "Data Analysis",
     "Data Modeling",
-    "Data Validation",
-    "Data Visualization Tools",
-    "Presentation Skills",
-    "Programming",
-    "Spreadsheet Skills",
-    "AI Analytics",
-    "AI Strategy",
+    "Data Visualization",
     "Analytical Reporting",
-    "Business Communication",
-    "Computer Networking",
-    "Data Interpretation",
-    "Data Quality Management",
-    "Data Structures",
-    "Formal Communication",
-    "Log Analysis",
-    "Planning",
-    "Python Programming",
-    "Software Development",
-    "Decision Making",
-    "Ethical Reasoning",
-    "Model Selection",
-    "Model Validation",
     "Statistical Analysis",
-    "Predictive Analytics",
-    "Process Automation",
-    "Regulatory Compliance",
-    "Strategic Thinking",
-    "Web Security",
+    "Data Quality Management",
+    "Process Improvement",
+    "Stakeholder Communication",
+    "Problem Solving",
+    "Commercial Thinking",
   ],
 };
 
@@ -163,7 +148,7 @@ export default function Resume() {
           </h2>
 
           <p className="text-[10px] text-gray-800 leading-snug">
-          BCA graduate with strong skills in <b>Python, SQL, Excel, and Power BI,</b> experienced in <b> developing dashboards, analytical reports, and structured datasets</b>  to support data-driven decision-making. Proficient in <b>data cleaning, transformation, and visualization</b>  to identify trends and generate actionable insights. Brings a blend of technical development experience and analytical thinking to improve business outcomes and efficiency.
+          <b>MIS Executive / Data Analyst</b> leading a <b>paper-to-ERP transition</b> at a footwear and clothing manufacturer, covering ERP rollout, training 23 employees, vendor coordination and sales analysis. BCA graduate skilled in <b>Excel, Power BI, SQL and Python</b>, with hands-on experience in <b>data cleaning, dashboards and reporting</b> that turn raw data into business decisions.
           </p>
         </section>
 
@@ -182,7 +167,7 @@ export default function Resume() {
               Christ University — Bachelor of Computer Applications (BCA)
             </p>
             <p className="text-[10px] text-gray-600">
-              Delhi NCR | Apr 2023 – Present | GPA: 3.4/4.0
+              Delhi NCR | Apr 2023 – Mar 2026 | GPA: 3.4/4.0
             </p>
           </div>
 
@@ -206,25 +191,11 @@ export default function Resume() {
 
           <ul className="list-disc pl-4 text-[10px] text-gray-700 space-y-0">
             <li className="text-[9.5px]"><b>Analytics & BI:</b> {skillCategories["Analytics & BI"].join(" • ")}</li>
-            <li><b>Databases:</b> {skillCategories["Databases"].join(" • ")}</li>
-            <li><b>Tools & Development:</b> {skillCategories["Tools & Development"].join(" • ")}</li>
+            <li><b>ERP & MIS:</b> {skillCategories["ERP & MIS"].join(" • ")}</li>
+            <li><b>Databases & Tools:</b> {skillCategories["Databases & Tools"].join(" • ")}</li>
+            <li><b>GenAI Tools:</b> GitHub Copilot • Claude AI • ChatGPT (coding, data analysis, reporting)</li>
             <li><b>Core Strengths:</b> {skillCategories["Strengths"].join(" • ")}</li>
-          </ul>
-        </section>
-
-        <hr className="border-gray-300 my-1" />
-
-        {/* =========================
-            TECHNICAL SKILLS
-        ========================= */}
-        <section>
-          <h2 className="text-sm font-bold uppercase mb-0.5 text-gray-900">
-            Technical Skills
-          </h2>
-
-          <ul className="list-disc pl-4 text-[10px] text-gray-700 space-y-0">
-            <li><b>GenAI Integration:</b> GitHub Copilot, Claude AI, ChatGPT, PowerPoint for coding, debugging, docs, and presentations; <b>~25% faster delivery</b>.</li>
-            <li><b>AI-Driven Analysis:</b> Applied GenAI for data insights, reporting, predictive modeling support, and business recommendations.</li>
+            <li><b>Languages:</b> {languages.map(({ name, level }) => `${name} (${level})`).join(" • ")}</li>
           </ul>
         </section>
 
@@ -238,13 +209,41 @@ export default function Resume() {
             Work Experience
           </h2>
 
+          {/* Indian Plastic Footwear and Clothing */}
+          <div className="mt-0.5">
+            <p className="font-semibold text-xs text-gray-900">
+              Indian Plastic Footwear And Clothing Pvt. Ltd. — MIS Executive / Data Analyst
+            </p>
+            <p className="text-[10px] text-gray-600 mb-0.5">
+              Bahadurgarh | May 2026 – Present
+            </p>
+
+            <ul className="list-disc pl-4 text-[10px] text-gray-700 space-y-0">
+              <li>
+                Leading the move from a <b>fully paper-based system to a custom ERP</b>, covering stock, orders, billing and dispatch, to give the company <b>real-time tracking</b> for the first time. Also act as ERP admin.
+              </li>
+              <li>
+                Worked with the <b>ERP vendor's development team</b> on module design, turning shop-floor and office workflows into requirements and reporting bugs from testing.
+              </li>
+              <li>
+                <b>Trained 23 employees across 4 departments</b> (Sales 10, Accounts 6, Warehouse 4, Inventory 3) to run daily work on the ERP.
+              </li>
+              <li>
+                Monitor operations such as <b>QR code printing and labelling</b>, checking that the defined process flow is followed on the floor.
+              </li>
+              <li>
+                Analysing <b>historical sales data</b> in <b>Excel</b> and <b>Power BI</b> to find the top-selling articles and where they sell, and studying the drivers behind their performance. Clean the data (name errors, duplicates) with <b>Python (Pandas)</b>.
+              </li>
+            </ul>
+          </div>
+
         {/* Sir Ganga Ram Hospital */}
 <div className="mt-0.5">
   <p className="font-semibold text-xs text-gray-900">
     Sir Ganga Ram Hospital (SGRH) — Data Analytics Intern (CKD Analytics)
   </p>
   <p className="text-[10px] text-gray-600 mb-0.5">
-    New Delhi | Jan 2026 – Present
+    New Delhi | Jan 2026 – Mar 2026
   </p>
 
   <ul className="list-disc pl-4 text-[10px] text-gray-700 space-y-0">
@@ -271,13 +270,13 @@ export default function Resume() {
 
             <ul className="list-disc pl-4 text-[10px] text-gray-700 space-y-0">
               <li>
-                Built medical reminder web app using <b>React.js</b> with structured tracking for <b>100+ test users</b>; integrated <b>Firebase Realtime Database</b> for data synchronization.
+                Built a medical reminder web app with structured tracking for <b>100+ test users</b>.
               </li>
               <li>
-                Optimized UI rendering and component structure, reducing load time by <b>~30%</b> using web performance tools.
+                Improved the app's page structure and speed, reducing load time by <b>~30%</b>.
               </li>
               <li>
-                Collaborated with 4-member team to implement engagement tracking, improving feature adoption by <b>~20%</b>.
+                Worked in a <b>4-member team</b> to add user engagement tracking, increasing feature use by <b>~20%</b>.
               </li>
             </ul>
           </div>
@@ -293,79 +292,17 @@ export default function Resume() {
 
             <ul className="list-disc pl-4 text-[10px] text-gray-700 space-y-0">
               <li>
-                Developed responsive web pages using <b>HTML, CSS, JavaScript</b>, improving UX and load speed by <b>~20%</b>.
+                Developed responsive web pages, improving user experience and load speed by <b>~20%</b>.
               </li>
               <li>
-                Analyzed performance metrics using <b>Chrome DevTools and Lighthouse</b>, contributing to <b>~15%</b> efficiency improvements.
+                Analyzed website performance metrics, contributing to <b>~15%</b> efficiency improvements.
               </li>
               <li>
-                Delivered <b>3+ live project components</b> in production with clean backend integration across modules.
+                Delivered <b>3+ live project components</b> used in production.
               </li>
             </ul>
           </div>
         </section>
-
-                <hr className="border-gray-300 my-1" />
-
-
-       {/* =========================
-    PROJECTS
-========================= */}
-<section>
-  <h2 className="text-sm font-bold uppercase mb-0.5 text-gray-900">
-    Projects
-  </h2>
-
-  {/* Project 1 */}
-  <div className="mt-0.5">
-    <div className="flex items-center justify-between gap-2">
-      <p className="font-semibold text-xs text-gray-900">
-        PhonePe Transactions Analysis Dashboard — Power BI
-      </p>
-      <a
-        href="https://app.powerbi.com/view?r=eyJrIjoiZjUyM2U0NWMtNDZhYi00NjhlLWIwZTMtYWJlOGI1ZDgzODExIiwidCI6IjE5MWRkNjBkLTA5MGEtNDQ1OS1hMDcxLWIwM2M4MGYzYWMzYiJ9"
-        target="_blank"
-        rel="noreferrer"
-        className="text-[9px] underline text-gray-700"
-      >
-        Dashboard
-      </a>
-    </div>
-
-    <p className="text-[9.5px] text-gray-700 mt-0">
-      <b>Tech:</b> Power BI • Power Query • Data Modeling
-    </p>
-
-    <ul className="list-disc pl-4 text-[10px] text-gray-700 space-y-0 mt-0.5">
-      <li>
-        Built interactive dashboard tracking KPIs: <b>Total Amount (~3,474M)</b>, <b>Transactions (~300K)</b>, <b>Success Rate (~96%)</b>; analyzed service and transfer-type patterns.
-      </li>
-      <li>
-        Identified key failure reasons (Wrong PIN, Server error, Bank denied) to support reliability monitoring.
-      </li>
-    </ul>
-  </div>
-
-  {/* Project 2 */}
-<div className="mt-0.5">
-  <p className="font-semibold text-xs text-gray-900">
-    CKD Analytics — Kidney Transplant Outcomes Dashboard
-  </p>
-
-  <p className="text-[9.5px] text-gray-700 mt-0">
-    <b>Tech:</b> Python • Pandas • NumPy • EDA • Correlation Analysis • Chart.js • Tailwind
-  </p>
-
-  <ul className="list-disc pl-4 text-[10px] text-gray-700 space-y-0 mt-0.5">
-    <li>
-      Cleaned clinical datasets (<b>195 patients, 1,297 records</b>); computed recovery KPIs showing <b>Creatinine 7.48→1.55 mg/dL (+79.3%)</b>, <b>Hemoglobin 9.07→12.82 g/dL (+41.3%)</b>.
-    </li>
-    <li>
-      Conducted correlation/risk analysis (Age, BMI, follow-up) and visualized insights via interactive dashboard with acceptance monitoring (<b>137 accepted, 58 rejected</b>).
-    </li>
-  </ul>
-</div>
-</section>
 
         <hr className="border-gray-300 my-1" />
 
@@ -383,27 +320,7 @@ export default function Resume() {
             <li><b>Quantium Data Analytics Job Simulation</b> (Forage, Feb 2026)</li>
             <li><b>SQL: Basic to Advanced</b> (Udemy, Oct 2025)</li>
             <li><b>Introduction to Python</b> (Infosys Springboard, Aug 2024)</li>
-            <li><b>Data Analytics Program</b> (Top Varsity, Ongoing)</li>
-            <li><b>Computer Network</b> (Huawei Talent, Jan 2025)</li>
-            <li><b>Web Development</b> (Main Flow Services, 2024)</li>
             <li><b>Complete MySQL Bootcamp: Learn SQL Step by Step</b> (Udemy, Feb 2026)</li>
-          </ul>
-        </section>
-
-        <hr className="border-gray-300 my-1" />
-
-        {/* =========================
-            LANGUAGES
-        ========================= */}
-        <section>
-          <h2 className="text-sm font-bold uppercase mb-0.5 text-gray-900">
-            Languages
-          </h2>
-
-          <ul className="list-disc pl-4 text-[10px] text-gray-700 grid grid-cols-2 gap-y-0">
-            {languages.map(({ name, level }) => (
-              <li key={name}>{name} ({level})</li>
-            ))}
           </ul>
         </section>
       </div>
